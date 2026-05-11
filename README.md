@@ -27,7 +27,7 @@ src/
  │    └── (other UI/scene classes)
 ⚙️ Installation & Setup
 1. Clone Repository
-git clone https://github.com/your-username/web-scraper-oop.git
+git clone https://github.com/faseehkahloon/web-scraper-oop.git
 2. Open in IntelliJ IDEA / Eclipse
 Import as a Maven/Java project
 3. Add JavaFX SDK

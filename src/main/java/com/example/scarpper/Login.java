@@ -59,19 +59,24 @@ public class Login extends Application {
         Button createAccount = new Button("New here?");
         Button forgotPassword = new Button("Forgot Password?");
         login.setOnAction(e -> {
+            if(web.getText().equals("admin") && file.getText().equals("scraper")) {
 
-            Scene launcherScene = Launcher.startScene(stage);
-            stage.setScene(launcherScene);
+                Scene launcherScene = Launcher.startScene(stage);
+                stage.setScene(launcherScene);
 
-            SetControl(
-                    message,
-                    "Data scraped successfully and File written successfully.",
-                    stage,
-                    login,
-                    cancel,
-                    forgotPassword,
-                    createAccount
-            );
+                SetControl(
+                        message,
+                        "Data scraped successfully and File written successfully.",
+                        stage,
+                        login,
+                        cancel,
+                        forgotPassword,
+                        createAccount
+                );
+            }
+            else{
+                System.out.println("Invalid Email or Password");
+            }
         });
 
         forgotPassword.setOnAction(e -> {
@@ -150,7 +155,4 @@ public class Login extends Application {
         forgot.setDisable(true);
         createAccount.setDisable(true);
     }
-
-
-
 }
